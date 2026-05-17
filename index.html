@@ -181,9 +181,9 @@
       <h1 class="heading">our projects</h1>
 
       <div class="box-container">
-        <a href="images/CryptoMining.png" class="box">
+        <div class="box project-card" data-title="HashPioneer" data-desc="Plataforma de mineração de criptomoedas com painel analítico em tempo real." data-md-link="projects/HashPioneer.md" data-screenshots="images/CryptoMining.png,images/CryptoMining.png">
           <div class="image">
-            <img src="images/CryptoMining.png" alt="" />
+            <img src="images/CryptoMining.png" alt="HashPioneer screenshot" />
           </div>
           <div class="content">
             <div class="info">
@@ -192,13 +192,11 @@
             </div>
             <i class="fas fa-plus"></i>
           </div>
-        </a>
+        </div>
 
-        
-
-        <a href="images/ChatbotE.png" class="box">
+        <div class="box project-card" data-title="Educator" data-desc="Chatbot educacional inteligente para interação de alunos e tutores." data-md-link="projects/Educator.md" data-screenshots="images/ChatbotE.png,images/ChatbotE.png">
           <div class="image">
-            <img src="images/ChatbotE.png" alt="" />
+            <img src="images/ChatbotE.png" alt="Educator screenshot" />
           </div>
           <div class="content">
             <div class="info">
@@ -207,13 +205,11 @@
             </div>
             <i class="fas fa-plus"></i>
           </div>
-        </a>
+        </div>
 
-        
-
-        <a href="images/BankingS.png" class="box">
+        <div class="box project-card" data-title="NexaBank" data-desc="Software bancário digital seguro com recursos de gestão financeira." data-md-link="projects/NexaBank.md" data-screenshots="images/BankingS.png,images/BankingS.png">
           <div class="image">
-            <img src="images/BankingS.png" alt="" />
+            <img src="images/BankingS.png" alt="NexaBank screenshot" />
           </div>
           <div class="content">
             <div class="info">
@@ -222,9 +218,53 @@
             </div>
             <i class="fas fa-plus"></i>
           </div>
-        </a>
+        </div>
+
+        <div class="box project-card more-project hidden" data-title="NovaStartup" data-desc="Experiência de onboarding para startups com automação de vendas." data-md-link="projects/NovaStartup.md" data-screenshots="images/ChatbotE.png,images/BankingS.png">
+          <div class="image">
+            <img src="images/ChatbotE.png" alt="NovaStartup screenshot" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>NovaStartup</h3>
+              <p>startup sales automation</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+
+        <div class="box project-card more-project hidden" data-title="HealthPro" data-desc="Plataforma de saúde com agendamento e histórico de pacientes." data-md-link="projects/HealthPro.md" data-screenshots="images/BankingS.png,images/CryptoMining.png">
+          <div class="image">
+            <img src="images/BankingS.png" alt="HealthPro screenshot" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>HealthPro</h3>
+              <p>healthcare platform</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-actions">
+        <button id="load-more-projects" class="btn">ver mais</button>
       </div>
     </section>
+
+    <div class="project-modal" id="project-modal" aria-hidden="true">
+      <div class="modal-container">
+        <button class="close-modal" aria-label="Close project details">×</button>
+        <div class="modal-body">
+          <div class="modal-header">
+            <h3 class="modal-title"></h3>
+            <p class="modal-description"></p>
+            <a class="project-md-link btn" href="#" target="_blank">Abrir MD</a>
+          </div>
+          <div class="modal-gallery"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- projects section ends -->
 
@@ -430,28 +470,64 @@
     <section class="contact" id="contact">
       <h1 class="heading">contact us</h1>
 
-      <div class="row">
+      <div class="contact-methods">
         <div class="contact-card">
-          <h3>contact details</h3>
-          <p><strong>Email:</strong> info@kaptech.site</p>
-          <p><strong>Phone:</strong> +258 853737802</p>
-          <p><strong>Support:</strong> assistent-wa</p>
+          <div class="icon-box">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </div>
+          <h3>Email</h3>
+          <p>Envie-nos um email</p>
+          <a href="mailto:info@kaptech.site" class="contact-link">info@kaptech.site</a>
         </div>
 
-        <form action="">
-          <h3>get in touch</h3>
-          <input type="text" placeholder="name" class="box" />
-          <input type="email" placeholder="email" class="box" />
-          <input type="number" placeholder="phone" class="box" />
-          <textarea
-            name=""
-            placeholder="message"
-            class="box"
-            id=""
-            cols="30"
-            rows="10"
-          ></textarea>
-          <input type="submit" value="send message" class="btn" />
+        <div class="contact-card">
+          <div class="icon-box">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h3>Telefone</h3>
+          <p>Ligue para nós</p>
+          <a href="tel:+258853737802" class="contact-link">+258 853 737 802</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon-box">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="1"></circle>
+              <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+            </svg>
+          </div>
+          <h3>Suporte</h3>
+          <p>Chat com nossa equipe</p>
+          <a href="https://wa.me/258853737802" target="_blank" class="contact-link">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form class="contact-form">
+          <h3>Envie uma mensagem</h3>
+          <div class="form-group">
+            <input type="text" placeholder="Seu nome" class="box" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Seu email" class="box" required />
+          </div>
+          <div class="form-group">
+            <input type="number" placeholder="Seu telefone" class="box" />
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="Sua mensagem"
+              class="box"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+          <input type="submit" value="Enviar mensagem" class="btn" />
         </form>
       </div>
     </section>
@@ -462,24 +538,65 @@
 
     <!-- footer section starts  -->
 
-    <section class="footer">
-      <div class="links">
-        <a class="btn" href="#home">home</a>
-        <a class="btn" href="#about">about</a>
-        <a class="btn" href="#services">services</a>
-        <a class="btn" href="#projects">projects</a>
-        <a class="btn" href="#pricing">pricing</a>
-        <a class="btn" href="#contact">contact</a>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>KAPTECH</h3>
+          <p>Soluções digitais inovadoras para o crescimento do seu negócio. Web development, mobile apps e soluções em IA.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#pricing">Preços</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile Apps</a></li>
+            <li><a href="#services">AI Solutions</a></li>
+            <li><a href="#services">Cybersecurity</a></li>
+            <li><a href="#services">Consultoria</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="mailto:info@kaptech.site">info@kaptech.site</a></li>
+            <li><a href="tel:+258853737802">+258 853 737 802</a></li>
+            <li><a href="https://wa.me/258853737802" target="_blank">WhatsApp</a></li>
+            <li>Maputo, Moçambique</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="credit">
-        &copy2026
-        
-          <span><a href="http://kaptech.site/">Kaptech</a></span>
-        
-        | all rights reserved!
+      <div class="footer-bottom">
+        <p>&copy; 2026 <span><a href="http://kaptech.site/">KAPTECH</a></span> - Todos os direitos reservados!</p>
       </div>
-    </section>
+    </footer>
 
     <!-- footer section ends -->
 
@@ -489,9 +606,5 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-
-    <script>
-      lightGallery(document.querySelector(".projects .box-container"));
-    </script>
   </body>
 </html>
